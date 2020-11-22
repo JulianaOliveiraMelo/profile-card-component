@@ -27,6 +27,7 @@ body {
 }
 
 .card {
+  position: absolute;
   width: 100%;
   height: 100%;
   padding: 5%;
@@ -43,26 +44,9 @@ body {
   color: #2d3248;
 }
 
-.card:before {
-  content: url("../images/bg-pattern-top.svg");
-  position: absolute;
-  display: inline;
-  width: 500px;
-  top: -59%;
-  left: -20%;
-}
-
-.card:after {
-  content: url("../images/bg-pattern-bottom.svg");
-  position: absolute;
-  display: inline;
-  width: 500px;
-  bottom: -76%;
-  right: 16%;
-  z-index: -1;
-}
-
 .container {
+  width: 400px;
+  margin: auto auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,8 +62,23 @@ body {
           align-items: center;
   border-radius: 15px;
   overflow: hidden;
-  position: relative;
-  z-index: 10;
+}
+
+.container:before {
+  content: url("../images/bg-pattern-top.svg");
+  position: absolute;
+  display: inline;
+  bottom: 41%;
+  right: 52%;
+}
+
+.container:after {
+  content: url("../images/bg-pattern-bottom.svg");
+  position: absolute;
+  display: inline;
+  top: 52%;
+  left: 50%;
+  z-index: -1;
 }
 
 .cardTopContainer {
@@ -96,15 +95,15 @@ body {
 }
 
 .imageBlock img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   position: absolute;
   top: 100%;
   left: 50%;
   width: 96px;
   height: 96px;
   margin-top: -48px;
-  /* Half the height */
   margin-left: -48px;
-  /* Half the width */
   border: 5px solid white;
   border-radius: 100px;
   -o-object-fit: contain;
@@ -117,7 +116,7 @@ body {
   position: relative;
   width: 100%;
   background-color: white;
-  padding-top: 70px;
+  padding-top: 80px;
   font-size: 18px;
 }
 
@@ -145,12 +144,11 @@ body {
 }
 
 .profileContainer p {
-  margin-top: 10px;
+  margin: 10px;
   font-size: 16px;
 }
 
 .infoContainer {
-  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,8 +161,12 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
   border-top: 1px solid rgba(150, 150, 150, 0.296);
+  padding: 10px 10px;
 }
 
 .infoContainer .infosBlock {
@@ -182,6 +184,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10px 30px 0 20px;
 }
 
 .infoContainer .infosBlock .value {
@@ -196,6 +199,6 @@ body {
   text-align: center;
   font-weight: 400;
   color: #6a6f81;
-  font-size: 12px;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */
